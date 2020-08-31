@@ -29,4 +29,10 @@ variable "region_list" {
 variable "security_group_ids" {
   description = "aws instance security group"
   default = "sg-ff74d1dd"
+  #default list varibale example
+  #default = ["${var.security_group_ids}"]
+  #Retriving single element from list
+  #vpc_security_group_ids = "${var.security_group_ids[1]}"
+  #passing variable in command lines
+  #terraform plan -var 'access_key=abc123' -var 'secret_key='abc123'
 }

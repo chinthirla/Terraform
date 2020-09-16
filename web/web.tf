@@ -13,6 +13,15 @@ module "vpc" {
   name = "web"
   cidr = "10.0.0.0/16"
   public_subnet = "10.0.1.0/24"
+  enable_dns_hostnames = false
+}
+resource "aws_vpc" "tfb" {
+  cidr_block = "${var.cidr}"
+  enable_dns_hostnames = "${var.enable_dns_hostnames}"
+  enable_dns_support = "${var.enable_dns_support}"
+  tags {
+    Name = "${var.name}"
+  }
 }
 output "public_subnet_id" {
   value = "${aws_subnet.public.id}"

@@ -49,7 +49,6 @@ output "cidr" {
   value = "${aws_vpc.tfb.cidr_block}"
 }
 resource "aws_instance" "web" {
-  . . .
 tags {
   Owner = "${var.owner_tag[count.index]}"
 }

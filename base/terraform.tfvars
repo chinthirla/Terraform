@@ -5,5 +5,6 @@ ami = {
 security_group_ids = [
   "sg-4f713c35",
   "sg-4f713c35",
-  "sg-4f713c35"
+  "sg-4f713c35" 
 ]
+
